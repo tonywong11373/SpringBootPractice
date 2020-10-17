@@ -2,6 +2,8 @@ package com.example.demo.model;
 
 import java.util.UUID;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class Person {
     // This is the declaration of the properties of the class for the intialisation purpose
     private final UUID id;
@@ -14,7 +16,7 @@ public class Person {
     // and we are going to initialize the variables once the computer allocate resources
     // to the projects, we set the id of type UUID with the id parameter, 
     // and the Name of type String with the Name parameter.
-    public Person(UUID id, String Name)
+    public Person(@JsonProperty("id")  UUID id,@JsonProperty("name") String Name)
     {
         this.id = id;
         this.Name = Name;
