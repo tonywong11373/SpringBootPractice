@@ -2,11 +2,14 @@ package com.example.demo.model;
 
 import java.util.UUID;
 
+import javax.validation.constraints.NotNull;
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class Person {
     // This is the declaration of the properties of the class for the intialisation purpose
     private final UUID id;
+    @NotNull
     private final String Name;
 
     // Using the constructor to make the Person Method to be usable
